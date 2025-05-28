@@ -62,7 +62,6 @@ nav .menu li {
 .hero {
   position: relative;
   height: 650px;
-background: url('/assets/images/background.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +70,9 @@ background: url('/assets/images/background.jpg') center/cover no-repeat;
   overflow: hidden;
 
 }
-
+.hero img{
+  position: absolute;
+}
 .hero .overlay {
   position: absolute;
   inset: 0;
