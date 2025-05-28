@@ -75,7 +75,6 @@ nav .menu li {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* lớp phủ nền mờ */
   z-index: 1;
 }
 
@@ -84,7 +83,6 @@ nav .menu li {
   z-index: 2;
   animation: fadeInUp 1s ease-in-out;
   top: -70px;
-  box-shadow: 8px 8px 20px rgba(101, 67, 33, 0.5); /* nâu classic */
 }
 
 .hero-title {
