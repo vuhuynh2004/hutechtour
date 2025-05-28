@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HutechTour</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <span>📞 999999999 | 🕕 6h sáng - 11h đêm</span>
+      <div class="socials">
+        <a href="#"><img src="assets/images/fb.png" alt=""></a> | <a href="#"><img src="assets/images/Zalo.png" alt=""></a> | <a href="#"><img src="assets/images/Email.png" alt=""></a>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html"><h1 class="logo"><img src="assets/images/Htour_logo.png" alt=""> HutechTour</h1></a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Tours</button>
+</li>
+
+
+        <li><a href="#" class="btn-dattourdattour" id="btndattour">Đặt Tour</a></li>
+        <li>
+
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Trang</button>
+</li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Blog</button>
+</li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Contact</button>
+</li>
+
+</li>
+      </ul>
+        <div class="overlay" id="popupOverlay">
+    <div class="popup" role="alert" aria-live="assertive" aria-modal="true">
+      <button class="close-btn" id="closePopupBtn" aria-label="Đóng popup">&times;</button>
+      
+      <div class="icon-warning" aria-hidden="true">
+        <svg viewBox="0 0 64 56" xmlns="http://www.w3.org/2000/svg" >
+          <polygon class="triangle" points="32 2 62 54 2 54"/>
+          <line class="exclamation" x1="32" y1="16" x2="32" y2="36"/>
+          <circle class="exclamation" cx="32" cy="44" r="3"/>
+        </svg>
+      </div>
+      
+      <p>Chức năng đang được phát triển, xin vui lòng quay lại sau!</p>
+    </div>
+  </div>
+    </nav>
+<section class="hero">
+  <div class="overlay"></div> <!-- lớp phủ mờ -->
+  <div class="hero-content">
+    <h2 class="hero-title">Tìm tour đặc biệt cho bạn hôm nay</h2>
+    <h3 class="hero-subtitle">Cùng HutechTours</h3>
+    <a href="#" class="btn-primary" id="scrollBtn">XEM TOUR</a>
+
+  </div>
+</section>
+
+  </header>
+
+  <div class="why-search-container">
+    <div class="why-us">
+      <h2>Tại sao chọn chúng tôi?</h2>
+      <div class="features">
+      <div class="feature">
+  <strong>Nhiều năm kinh nghiệm</strong>
+  <p>Du Lịch Độc Đáo là người bạn đồng hành tin cậy với dịch vụ chuyên nghiệp từ tư vấn đến hậu tour.</p>
+</div>
+<div class="feature">
+  <strong>Giá tốt – Không phí ẩn</strong>
+  <p>Cam kết giá minh bạch, không phí ẩn, khởi hành đúng lịch trình.</p>
+</div>
+<div class="feature">
+  <strong>Lịch tour linh hoạt</strong>
+  <p>Tour trong và ngoài nước được cập nhật liên tục, khởi hành hàng tuần, phù hợp với thời gian cá nhân.</p>
+</div>
+<div class="feature">
+  <strong>Hướng dẫn viên chuyên nghiệp</strong>
+  <p>Đội ngũ thân thiện, am hiểu văn hóa địa phương, mang lại trải nghiệm an toàn và đáng nhớ.</p>
+</div>
+<div class="feature">
+  <strong>Hệ thống hỗ trợ 24/7</strong>
+  <p>Tư vấn trực tuyến mọi lúc, đặt tour nhanh chóng chỉ với vài bước.</p>
+</div>
+<div class="feature">
+  <strong>Hành trình trọn vẹn</strong>
+  <p>Chúng tôi đồng hành cùng bạn để mỗi chuyến đi đều là một hành trình đáng nhớ.</p>
+</div>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <h3>Tìm Tour</h3>
+      <p>Tìm tour mơ ước của bạn hôm nay!</p>
+      <input type="text" placeholder="Tìm tour">
+      <select><option>Điểm đến</option></select>
+      <select><option>Loại tour</option></select>
+      <select><option>Tháng</option></select>
+      <button>TÌM TOUR</button>
+    </div>
+  </div>
+
+<section id="tourSection" class="tour-section">
+  <div class="popular-tours">
+  <img class="tagname1" src="assets/images/tag.png" alt=""><h2>Tour Giá Sập Sàn</h2></div>
+    <div class="container-wrapper">
+    <div class="viewport">
+
+    <div class="slider" id="slider">
+    <div class="tour-card hidden">
+    <img src="assets/images/our-phuyen.jpg" alt="Tour Phú Yên">
+    <div class="discount-label">Giảm 20%</div>
+    <div class="tour-name">Tour Phú Yên</div>
+  <div class="tour-popup">
+  <h3>Tour Phú Yên</h3>
+  <p>Thời gian: 3 ngày 2 đêm</p>
+  <p>Mô tả: Khám phá Nhà thờ Mằng Lăng, Đầm Ô Loan, Bãi Xép, Vũng Rô và Hải Đăng Mũi Điện.</p>
+<div class="tour-price">
+  <div class="old-price">3.190.000 VND</div>
+  <div class="new-price">2.552.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★★</span>
+    <span class="reviews">(123 đánh giá)</span>
+  </div>
+  <a href="paymentphuyen.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+
+<div class="tour-card hidden">
+    <img src="assets/images/condao.jpg" alt="Tour Côn Đảo">
+    <div class="discount-label">Giảm 10%</div>
+    <div class="tour-name">Tour Côn Đảo</div>
+  <div class="tour-popup">
+  <h3>Tour Côn Đảo</h3>
+  <p>Thời gian: 3 ngày 2 đêm</p>
+  <p>Mô tả: Tham quan Trại Phú Hải, Chuồng Cọp, tắm biển Đầm Trầu, viếng mộ chị Võ Thị Sáu.</p>
+<div class="tour-price">
+  <div class="old-price">3.950.000 VND</div>
+  <div class="new-price">3.555.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★☆</span>
+    <span class="reviews">(98 đánh giá)</span>
+  </div>
+  <a href="paymentcondao.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+
+<div class="tour-card hidden">
+    <img src="assets/images/manden.jpg" alt="Tour Măng Đen">
+    <div class="discount-label">Giảm 15%</div>
+    <div class="tour-name">Tour Măng Đen</div>
+  <div class="tour-popup">
+  <h3>Tour Măng Đen</h3>
+  <p>Thời gian: 3 ngày 2 đêm</p>
+  <p>Mô tả: Trải nghiệm văn hóa địa phương, tham quan Thác Pa Sỹ, Hồ Đắk Ke, làng Kon Bring.</p>
+<div class="tour-price">
+  <div class="old-price">2.750.000 VND</div>
+  <div class="new-price">2.337.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★☆</span>
+    <span class="reviews">(76 đánh giá)</span>
+  </div>
+  <a href="paymentmangden.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+
+<div class="tour-card hidden">
+    <img src="assets/images/lyson.jpg" alt="Tour Lý Sơn">
+    <div class="discount-label">Giảm 20%</div>
+    <div class="tour-name">Tour Lý Sơn</div>
+  <div class="tour-popup">
+  <h3>Tour Lý Sơn</h3>
+  <p>Thời gian: 4 ngày 3 đêm</p>
+  <p>Mô tả: Lặn ngắm san hô ở đảo Bé, tham quan Chùa Hang, Cổng Tò Vò, Nhà trưng bày Hoàng Sa.</p>
+<div class="tour-price">
+  <div class="old-price">3.150.000 VND</div>
+  <div class="new-price">2.520.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★★</span>
+    <span class="reviews">(88 đánh giá)</span>
+  </div>
+  <a href="paymentquynhon.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+
+<div class="tour-card hidden">
+    <img src="assets/images/quynhon.jpg" alt="Tour Quy Nhơn">
+    <div class="discount-label">Giảm 15%</div>
+    <div class="tour-name">Tour Quy Nhơn</div>
+  <div class="tour-popup">
+  <h3>Tour Quy Nhơn</h3>
+  <p>Thời gian: 3 ngày 2 đêm</p>
+  <p>Mô tả: Tham quan Ghềnh Ráng Tiên Sa, Kỳ Co – Eo Gió, Tháp Đôi.</p>
+<div class="tour-price">
+  <div class="old-price">2.980.000 VND</div>
+  <div class="new-price">2.533.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★☆</span>
+    <span class="reviews">(102 đánh giá)</span>
+  </div>
+  <a href="paymentquynhon.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+
+<div class="tour-card hidden">
+    <img src="assets/images/tour-phuquy.jpg" alt="Tour Phú Qúy">
+    <div class="discount-label">Giảm 10%</div>
+    <div class="tour-name">Tour Phú Qúy</div>
+  <div class="tour-popup">
+  <h3>Tour Phú Qúy</h3>
+  <p>Thời gian: 3 ngày 2 đêm</p>
+  <p>Mô tả: Lặn san hô tại Hòn Tranh, khám phá Cột cờ chủ quyền, Dốc Gió, ngọn Hải đăng.</p>
+<div class="tour-price">
+  <div class="old-price">2.690.000 VND</div>
+  <div class="new-price">2.421.000 VND</div>
+</div>
+  
+  <div class="tour-rating">
+    <span class="stars">★★★★☆</span>
+    <span class="reviews">(95 đánh giá)</span>
+  </div>
+  <a href="paymentphuquy.html" class="book-now-btn">Đặt ngay</a>
+
+</div>
+</div>
+<div class="tour-card hidden">
+  <img src="assets/images/tour-camranh.jpg" alt="Tour Cam Ranh">
+  <div class="discount-label">Giảm 18%</div>
+  <div class="tour-name">Tour Cam Ranh</div>
+  <div class="tour-popup">
+    <h3>Tour Cam Ranh</h3>
+    <p>Thời gian: 3 ngày 2 đêm</p>
+    <p>Mô tả: Tận hưởng biển xanh Bãi Dài, tham quan đảo Bình Ba và thưởng thức hải sản tươi sống.</p>
+    <div class="tour-price">
+      <div class="old-price">3.300.000 VND</div>
+      <div class="new-price">2.706.000 VND</div>
+    </div>
+    <div class="tour-rating">
+      <span class="stars">★★★★☆</span>
+      <span class="reviews">(97 đánh giá)</span>
+    </div>
+    <a href="paymentcamranh.html" class="book-now-btn">Đặt ngay</a>
+
+  </div>
+</div>
+
+<div class="tour-card hidden">
+  <img src="assets/images/tour-ninhbinh.jpg" alt="Tour Ninh Bình">
+  <div class="discount-label">Giảm 25%</div>
+  <div class="tour-name">Tour Ninh Bình</div>
+  <div class="tour-popup">
+    <h3>Tour Ninh Bình</h3>
+    <p>Thời gian: 2 ngày 1 đêm</p>
+    <p>Mô tả: Trải nghiệm vẻ đẹp Tràng An, Tam Cốc và khám phá chùa Bái Đính nổi tiếng.</p>
+    <div class="tour-price">
+      <div class="old-price">2.600.000 VND</div>
+      <div class="new-price">1.950.000 VND</div>
+    </div>
+    <div class="tour-rating">
+      <span class="stars">★★★★★</span>
+      <span class="reviews">(188 đánh giá)</span>
+    </div>
+    <a href="paymentninihbinh.html" class="book-now-btn">Đặt ngay</a>
+  </div>
+</div>
+
+<div class="tour-card hidden">
+  <img src="assets/images/tour-sapa.webp" alt="Tour Sapa">
+  <div class="discount-label">Giảm 30%</div>
+  <div class="tour-name">Tour Sapa</div>
+  <div class="tour-popup">
+    <h3>Tour Sapa</h3>
+    <p>Thời gian: 4 ngày 3 đêm</p>
+    <p>Mô tả: Chinh phục đỉnh Fansipan, thăm bản Cát Cát và tận hưởng khí hậu mát lành vùng núi.</p>
+    <div class="tour-price">
+      <div class="old-price">4.200.000 VND</div>
+      <div class="new-price">2.940.000 VND</div>
+    </div>
+    <div class="tour-rating">
+      <span class="stars">★★★★☆</span>
+      <span class="reviews">(162 đánh giá)</span>
+    </div>
+  <a href="paymentsapa.html" class="book-now-btn">Đặt ngay</a>
+  </div>
+ </div>
+  
+<div class="more-button-wrapper">
+  <a href="#" class="more-button" id="noTourBtn">Xem thêm</a>
+</div>
+
+  </div>
+  
+      <button id="leftBtn"><i class="fas fa-chevron-left"></i></button>
+<button id="rightBtn"><i class="fas fa-chevron-right"></i></button>
+</div>
+    </div>
+
+  </section>
+<div class="overlay" id="popupOverlay_noTour">
+  <div class="popup">
+    <button class="close-btn" id="closePopupBtn_noTour">&times;</button>
+    <div class="icon">😢</div>
+    <p>Rất tiếc! Hiện tại không còn tour nào nữa.</p>
+  </div>
+</div>
+<section id="dattour" class="tour-section">
+    <div class="popular-tours">
+        <img class="tagname2" src="assets/images/tag.png" alt=""><h2>Tour phổ biến nhất</h2>
+    </div>
+    <div class="container-wrapper">
+        <div class="viewport">
+            <div class="slider" id="hot">  
+              <div class="tour-card hidden">  <img src="assets/images/tour-mientay.jpg" alt="Tour miền Tây">
+                    <div class="tour-name">Combo Tour Miền Tây</div>
+                    <div class="tour-popup">
+                        <h3>Combo Tour Miền Tây</h3>
+                        <p>Thời gian: 3 ngày 2 đêm</p>
+                        <p>Mô tả: Trải nghiệm văn hóa miệt vườn, tham quan Cồn Phụng, Chùa Dơi, chợ nổi Cái Răng.</p>
+                        <div class="tour-price">
+                            <div class="new-price">8.690.000 VND</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(111187 đánh giá)</span>
+                        </div><a href="paymentcombomientay.html".html" class="book-now-btn">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card hidden">  <img src="assets/images/tour-sapa.jpg" alt="Tour Sapa">
+                    <div class="tour-name">Tour Sapa</div>
+                    <div class="tour-popup">
+                        <h3>Tour Sapa</h3>
+                        <p>Thời gian: 5 ngày 4 đêm</p>
+                        <p>Mô tả: Khám phá bản Cát Cát, chinh phục Fansipan, dạo Sapa.</p>
+                        <div class="tour-price">
+                            <div class="new-price">11.190.000 VND</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(10005 đánh giá)</span>
+                        </div><a href="paymentsapa2.html" class="book-now-btn">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card hidden">
+                    <img src="assets/images/tour-phanthiet.jpg" alt="Tour Phan Thiết">
+                    <div class="tour-name">Tour Phan Thiết</div>
+                    <div class="tour-popup">
+                        <h3>Tour Phan Thiết</h3>
+                        <p>Thời gian: 2 ngày 1 đêm</p>
+                        <p>Mô tả: Tham quan Đồi Cát Bay, Suối Tiên, biển Mũi Né và Lầu Ông Hoàng.</p>
+                        <div class="tour-price">
+                            <div class="new-price">1.690.000 VND</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(6600 đánh giá)</span>
+                        </div><a href="paymentphanthiet.html" class="book-now-btn">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card hidden">
+                    <img src="assets/images/tour-DNHABNH.jpg" alt="Tour Phan Thiết">
+                    <div class="tour-name"> Tour Đà Nẵng – Hội An – Bà Nà Hills</div>
+                    <div class="tour-popup">
+                        <h3>Tour Đà Nẵng – Hội An – Bà Nà Hills </h3>
+                        <p>Thời gian: 4 ngày 3 đêm</p>
+                        <p>Mô tả: Tham quan NGŨ HÀNH SƠN, PHỐ CỔ HỘI AN, BÀ NÀ HILLS, CẦU VÀNG, FANTASY PARK...</p>
+                        <div class="tour-price">
+                            <div class="new-price">6.690.000 VND</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(11500 đánh giá)</span>
+                        </div><a href="paymentcombo3.html" class="book-now-btn">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card hidden">
+                    <img src="assets/images/tour-HALONG.jpg" alt="Tour Phan Thiết">
+                    <div class="tour-name">Tour Hạ Long – Yên Tử</div>
+                    <div class="tour-popup">
+                        <h3>Tour Hạ Long – Yên Tử </h3>
+                        <p>Thời gian: 3 ngày 2 đêm</p>
+                        <p>Mô tả: Tham quan HẠ LONG , PHỐ ĐI BỘ MARINA, ĐỘNG THIÊN CUNG, HÒN GÀ CHỌI, YÊN TỬ .</p>
+                        <div class="tour-price">
+                            <div class="new-price">7.490.000 VNĐ</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(11706 đánh giá)</span>
+                        </div><a href="paymenthalong.html" class="book-now-btn">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card hidden">
+                    <img src="assets/images/tour-DALAT.jpg" alt="Tour Phan Thiết">
+                    <div class="tour-name">Tour Đà Lạt</div>
+                    <div class="tour-popup">
+                        <h3>Tour Đà Lạt</h3>
+                        <p>Thời gian: 3 ngày 2 đêm</p>
+                        <p>Mô tả: Tham quan Đà Lạt mộng mơ, Check-in điểm sống ảo, o	Thiền viện Trúc Lâm, Hồ Tuyền Lâm.</p>
+                        <div class="tour-price">
+                            <div class="new-price">2.990.000 VND</div>
+                        </div>
+                        <div class="tour-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(1676 đánh giá)</span>
+                        </div><a href="paymentdalat.html" class="book-now-btn">Đặt ngay</a>
+                    </div>  
+                </div>
+<div class="more-button-wrapper">
+  <a  class="more-button" id="noTourBtn">Xem thêm</a>
+</div>
+            </div>
+            <button id="leftBtn1"><i class="fas fa-chevron-left"></i></button>
+            <button id="rightBtn1"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+<div class="overlay" id="popupOverlay_noTour">
+  <div class="popup">
+    <button class="close-btn" id="closePopupBtn_noTour">&times;</button>
+    <div class="icon">😢</div>
+    <p>Rất tiếc! Hiện tại không còn tour nào nữa.</p>
+  </div>
+</div>
+ <script src="assets/js/tourgiamgia.js"></script>
+ <script src="assets/js/tourhot.js"></script>
+ <script src="assets/js/funcion.js"></script>
+
+
+
+<section class="commitment">
+  <h2>Cam Kết Từ HutechTour</h2>
+  <p>
+    Chúng tôi cam kết mang đến dịch vụ đặt vé tour du lịch uy tín – nhanh chóng – minh bạch. Tất cả tour đều có lịch trình rõ ràng, giá niêm yết không phát sinh và đội ngũ hỗ trợ luôn sẵn sàng 24/7 để đồng hành cùng bạn trong mọi hành trình.
+  </p>
+</section>
+
+
+
+<section class="newsletter-container">
+  <div class="newsletter">
+    <h2>Đăng ký nhận bản tin</h2>
+    <input type="email" id="newsletterEmail" placeholder="Email của bạn">
+    <button id="newsletterBtn">Đăng ký</button>
+    <p id="newsletterMessage"></p>
+  </div>
+
+  <div class="map">
+    <iframe
+     src="https://www.google.com/maps?q=10.801817371132653,106.71400057911589&hl=vi&z=15&output=embed"
+  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-section">
+    <div>
+      <h4>Về chúng tôi</h4>
+      <p>Website thuộc dự án học tập của sinh viên ngành Quản trị Khách sạn – Trường Đại học Công nghệ TP.HCM (HUTECH). Nơi chia sẻ kiến thức và trải nghiệm trong lĩnh vực du lịch và khách sạn.</p>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <p>Trường Đại học Công nghệ TP.HCM (HUTECH)</p>
+      <p>📍 475A Điện Biên Phủ, P.25, Q. Bình Thạnh, TP.HCM</p>
+      <p>📞 (028) 5445 7777</p>
+      <p>📧 info@hutech.edu.vn</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

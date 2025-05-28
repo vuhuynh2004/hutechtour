@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-tour-title>Tour Phan Thiết</title>
+  <link rel="stylesheet" href="assets/css/thanhtoan.css" />
+</head>
+<body data-tour
+  data-tour-name="Tour Du Lịch Phan Thiết"
+  data-tour-days="2 ngày 1 đêm"
+  data-hotel="Khách sạn 2 sao gần biển"
+  data-vehicle="Xe du lịch đời mới"
+  data-tour-code="PHANTHIET-211"
+  data-price-adult="1690000"
+  data-discount-child="0.4"
+  data-image="assets/images/tour-phanthiet.jpg"
+  onload="document.title = 'Tour Du Lịch Phan Thiết';">
+
+  <header>
+    <div class="top-bar">
+      <span>📞 999999999 | 🕕 6h sáng - 11h đêm</span>
+      <div class="socials">
+        <a href="#"><img src="assets/images/fb.png" alt=""></a> |
+        <a href="#"><img src="assets/images/Zalo.png" alt=""></a> |
+        <a href="#"><img src="assets/images/Email.png" alt=""></a>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html"><h1 class="logo"><img src="assets/images/Htour_logo.png" alt=""> HutechTour</h1></a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Tours</button>
+</li>
+
+
+        <li><a href="#" class="btn-dattourdattour" id="btndattour">Đặt Tour</a></li>
+        <li>
+
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Trang</button>
+</li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Blog</button>
+</li>
+<li>
+  <button class="showPopupBtn" style="all:unset; cursor:pointer;">Contact</button>
+</li>
+
+</li>
+      </ul>        <div class="overlay" id="popupOverlay">
+    <div class="popup" role="alert" aria-live="assertive" aria-modal="true">
+      <button class="close-btn" id="closePopupBtn" aria-label="Đóng popup">&times;</button>
+      
+      <div class="icon-warning" aria-hidden="true">
+        <svg viewBox="0 0 64 56" xmlns="http://www.w3.org/2000/svg" >
+          <polygon class="triangle" points="32 2 62 54 2 54"/>
+          <line class="exclamation" x1="32" y1="16" x2="32" y2="36"/>
+          <circle class="exclamation" cx="32" cy="44" r="3"/>
+        </svg>
+      </div>
+      
+      <p>Chức năng đang được phát triển, xin vui lòng quay lại sau!</p>
+    </div>
+  </div>
+    </nav>
+  </header>
+  <marquee class="marquee">Chúc quý khách có một chuyến du lịch thật nhiều niềm vui và trải nghiệm đáng nhớ!</marquee>
+
+  <div class="payment-container">
+    <div class="tour-detail">
+      <div class="image">
+        <img id="tour-image" src="" alt="Tour" />
+        <p class="child-note">* Vé trẻ em được giảm 60% so với vé người lớn</p>
+      </div>
+      <div class="info">
+        <h1 id="tour-name"></h1>
+        <p><strong>Thời gian:</strong> <span id="tour-days"></span></p>
+        <p><strong>Khách sạn:</strong> <span id="hotel"></span></p>
+        <p><strong>Phương tiện:</strong> <span id="vehicle"></span></p>
+        <p><strong>Giá vé người lớn:</strong> 
+          <span id="price-adult-formatted"></span>
+        </p>
+        <p><strong>Giá vé trẻ em:</strong> 
+          <span id="price-child-formatted"></span>
+        </p>
+<div class="tour-box" data-tour-capacity="30" data-tour-joined="12">
+  <div class="tour-corner-info">
+    Đã có <span class="current-joined">12</span>/30 khách
+  </div>
+</div>
+        <div class="ticket-rows">
+          <div class="ticket-input">
+            <label for="adult">Vé người lớn:</label>
+            <input type="number" id="adult-tickets" min="1" value="1" onchange="updateTotal()" />
+          </div>
+          <div class="ticket-input">
+            <label for="child">Vé trẻ em dưới 3 tuổi:</label>
+            <input type="number" id="child-tickets" min="0" value="0" onchange="updateTotal()" />
+          </div>
+        </div>
+
+        <div class="date-selection">
+          <label>Ngày đi:
+            <input type="date" id="start-date" />
+          </label>
+          <label>Ngày về:
+            <input type="date" id="end-date" readonly />
+          </label>
+        </div>
+        <p id="warning" style="display:none; color: red;"></p>
+<p id="seat-warning" style="display:none; color: orange;">⚠ Số lượng vé vượt quá giới hạn còn lại!</p>
+<p id="date-warning" style="display:none; color: red;">⚠ Vui lòng chọn ngày khởi hành</p>
+
+
+        <p id="seats-info" class="seats-info"></p>
+      </div>
+    </div>
+  </div>
+
+<div class="payment-bar">
+  <div class="price-info">
+    
+    <div class="price-row">
+      <span class="label">Giá:</span>
+      <span id="final-price" class="final-price"></span>
+    </div>
+  </div>
+
+
+<div class="payment-options">
+  <select id="payment-method">
+    <option value="">-- Chọn phương thức thanh toán --</option>
+    <option value="bank">Chuyển khoản ngân hàng</option>
+    <option value="momo">Ví MoMo</option>
+    <option value="card">Thẻ tín dụng/Ghi nợ</option>
+  </select>
+  
+  <button id="book-button" class="confirm-btn">
+    <span class="icon">💳</span> Thanh toán
+  </button>
+</div>
+
+  </div>
+
+  <div class="popup" id="payment-popup">
+    <div class="popup-content">
+      <h2>Xác nhận thanh toán</h2>
+      <p><strong>Tổng tiền:</strong> <span id="confirm-total"></span> VNĐ</p>
+      <p class="warning">⚠ Vé đã mua không thể hoàn trả. Vui lòng kiểm tra kỹ trước khi thanh toán.</p>
+      <div class="popup-actions">
+        <button class="cancel" onclick="closePopup()">Quay lại</button>
+        <button class="confirm" onclick="processPayment()">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="success-popup">
+    <div class="popup-content">
+      <h2>Thanh toán hoàn tất 🎉</h2>
+      <div class="popup-actions">
+        <button onclick="location.href='index.html'">Về trang chủ</button>
+        <button onclick="downloadReceipt()">Tải biên lai</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+ <script src="assets/js/tourgiamgia.js"></script>
+ <script src="assets/js/tourhot.js"></script>
+ <script src="assets/js/funcion.js"></script>
+
+  <script>
+window.addEventListener('DOMContentLoaded', () => {
+  const tour = document.querySelector('[data-tour]');
+  document.getElementById('tour-image').src = tour.dataset.image;
+  document.getElementById('tour-name').textContent = tour.dataset.tourName;
+  document.getElementById('tour-days').textContent = tour.dataset.tourDays;
+  document.getElementById('hotel').textContent = tour.dataset.hotel;
+  document.getElementById('vehicle').textContent = tour.dataset.vehicle;
+
+  const priceAdult = parseInt(tour.dataset.priceAdult);
+  const discount = parseFloat(tour.dataset.discountChild);
+  const childPrice = priceAdult * (1 - discount);
+
+  document.getElementById('price-adult-formatted').textContent = priceAdult.toLocaleString('vi-VN') + ' VNĐ';
+  document.getElementById('price-child-formatted').textContent = childPrice.toLocaleString('vi-VN') + ' VNĐ';
+
+  // Cập nhật giá gốc giống giá đã giảm (đã sửa tại đây)
+  document.getElementById('original-price').textContent = priceAdult.toLocaleString('vi-VN') + 'đ';
+  document.getElementById('final-price').textContent = priceAdult.toLocaleString('vi-VN') + 'đ';
+
+  updateTotal();   
+});
+
+    // ✅ Gọi để cập nhật tổng tiền theo số lượng vé
+
+  </script>
+
+  <footer>
+    <div class="footer-section">
+      <div>
+        <h4>Về chúng tôi</h4>
+        <p>Website thuộc dự án học tập của sinh viên ngành Quản trị Khách sạn – Trường Đại học Công nghệ TP.HCM (HUTECH). Nơi chia sẻ kiến thức và trải nghiệm trong lĩnh vực du lịch và khách sạn.</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <p>Trường Đại học Công nghệ TP.HCM (HUTECH)</p>
+        <p>📍 475A Điện Biên Phủ, P.25, Q. Bình Thạnh, TP.HCM</p>
+        <p>📞 (028) 5445 7777</p>
+        <p>📧 info@hutech.edu.vn</p>
+      </div>
+    </div>
+  </footer>
+  <div class="popup" id="warning-popup">
+  <div class="popup-content">
+    <h2>⚠ Chưa chọn phương thức thanh toán</h2>
+    <p>Vui lòng chọn phương thức thanh toán để tiếp tục.</p>
+    <div class="popup-actions">
+      <button class="confirm" onclick="closeWarning()">Đóng</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
